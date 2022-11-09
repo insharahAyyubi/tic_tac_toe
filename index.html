@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/2d4e9f7759.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="game-start">
+
+  <div class="header">
+    <span id="tic">TIC</span>
+    <span id="tac">TAC</span>
+    <span id="toe">TOE</span>
+  </div>
+  <div class="alert hidden">
+   <span><i class="fas fa-exclamation-circle"></i></span> 
+    <span class="msg">Player name cannot be empty!</span>
+    <span class="close-btn">
+      <span class="fas fa-times"></span> </span>
+  </div>
+  <div class="game-start_choice">
+    <header>
+      <h4>PICK PLAYER 1'S MARK</h4>
+    </header>
+    <div class="grp">
+      <div id="x" class="cross-mark ">
+        <img id="x_img" src="Images\cross.png" alt="">
+      </div>
+      <div id="o" class="zero-mark selected">
+        <img id="o_img" src="Images\zero.png" alt="">
+      </div>
+    </div>
+    <footer>
+      <h4 class="warn">X GOES FIRST!</h4>
+    </footer>
+  </div>
+  <p class="enter-name">Enter Names</p>
+  <input type="text" class="names player1" placeholder="Player 1 Name" spellcheck="false"  outline="none">
+  <input type="text" class="names player2" placeholder="Player 2 Name" spellcheck="false">
+    <div class="btn-new-game">
+     <h2 id="new">NEW GAME</h2>
+    </div>
+  </div>
+
+
+  <div id="gameplay" class="gameplay x d-none">
+    <div class="logo">
+        <img src="Images\cross-pink-35.png">
+        <img src="Images\zero-yel-30.png" alt="">
+        
+    </div>
+    <div class="turn">
+        <img id="turn" src="Images\cross.png" width="22">
+        <h4>&nbspTURN</h4>
+    </div>
+    <div class="restart">
+        <img src="Images\restart.png" alt="">
+    </div>
+    
+        <div class="gameplay-card"> </div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="gameplay-card"></div>
+        <div class="winx button-bottom">
+            <p>X(P1)</p>
+            <h5 class="num p1">0</h5>
+        </div>
+        <div class="ties button-bottom">
+            <p>TIES</p>
+            <h5 class="num tie">0</h5>
+        </div>
+        <div class="wino button-bottom">
+            <p>O(P2)</p>
+            <h5 class="num p2">0</h5>
+        </div>
+</div>
+<div class="backdrop "></div>
+<section class="result ">
+    <h4 class="win-player">PLAYER 1 WIN</h4>
+    <div class="win-msg">
+        <img class="win-icon" src="Images\cross-pink-52.png">
+        <h1 class="win-msg-txt ttr yel">&nbspTAKES THE ROUND!</h1>
+        <h1 class="win-msg-txt round-tied d-none">ROUND TIED</h1>
+    </div>
+    <button class="btn-quit" onClick="refreshPage()"><h5>QUIT</h5></button>&nbsp&nbsp;
+    <button class="next-r"><h5>NEXT ROUND</h5></button>
+</section>
+
+  <script src="app.js"></script>
+  </body>
+</html>
